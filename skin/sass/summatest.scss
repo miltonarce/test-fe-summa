@@ -1,0 +1,76 @@
+@import "compass/css3";
+
+$colors: #ff910f, #ffd11a, #39a91f, #17b5ff, #6b6bff;
+$bgb: #ebebeb;
+$clink: #7f7f7f;
+$clinkA: #76b427;
+$bgHeader: #0b0b0b;
+$fontF: georgia, serif;
+$fontS: italic;
+.header-container {
+  display: flex;
+}
+.nav ul {
+  margin-top: 45px;
+  margin-bottom: 0;
+}
+.nav {
+  font-family: $fontF;
+  font-style: $fontS;
+  ul:first-child li {
+    display: inline-block;
+    padding: 5px 25px;
+    a {
+      color: $clink;
+      text-decoration: none;
+      font-size: 13px;
+    }
+    a:hover {
+      color: $clinkA;
+    }
+  }
+}
+.nav ul li ul li {
+  display: block !important;
+  background: $bgHeader;
+  padding-bottom: 5px;
+  a {
+    font-style: normal;
+  }
+}
+.nav ul li ul {
+  position: absolute;
+  width: 250px;
+  padding: 0px;
+  margin: 24px 0px;
+  z-index: 10;
+  li:hover {
+    background: #333333;
+  }
+}
+.box-list {
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  div {
+    background: $bgb;
+    margin: 0.5em;
+    padding: 15px;
+    width: 100%;
+    border-bottom: 1px solid #aeaeae;
+    p {
+      font-size: 12px;
+    }
+  }
+}
+.box-list div h3 {
+  font-style: $fontS;
+  font-family: $fontF;
+}
+@each $item in $colors {
+  .box-list div--#{$item} {
+    border-top: 10px solid #{$item};
+  }
+}
+.active {
+  display: block;
+}

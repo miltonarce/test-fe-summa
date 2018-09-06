@@ -1,0 +1,125 @@
+$bgBody: #1e1e1e;
+$bgHeader: #0b0b0b;
+$bgMain: #fff;
+$bgFooter: #141414;
+$green: #308E0F;
+$grey1: #f3f3f3;
+$grey2: #e5e5e5;
+$grey3: #cacaca;
+
+body {
+    background-color: $bgBody;
+    font-size: 13px;
+    margin: 0;
+    padding: 0 0 25px;
+
+    a {
+        color: $green;
+    }
+}
+
+.clearfix {
+    clear: both;
+}
+
+.wrapper {
+    width: 100%;
+    text-align: center;
+
+    .page {
+        width: 100%;
+
+        .header, .main, .top-container, .footer {
+            margin: 0 auto;
+            min-height: 50px;
+            text-align: left;
+            width: 100%;
+        }
+
+        .header {
+            background-color: $bgHeader;
+        }
+
+        .main {
+            background-color: $bgMain;
+        }
+
+        .footer {
+            background-color: $bgFooter;
+            border-top: 8px solid $green;
+        }
+    }
+}
+
+.header-container, .main-container, .footer-container {
+    margin: 0 auto;
+    min-height: 50px;
+    padding: 15px 1%;
+    width: 960px;
+}
+
+.top-container {
+    background-color: $grey1;
+    border-bottom: 1px solid $grey3;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+
+    .slider-container {
+        background-color: $grey2;
+        width: 100%;
+
+        .list {
+            margin: 0 auto;
+            max-height: 350px;
+            overflow: none;
+            width: 960px;
+
+            .item {
+                display: inline-block;
+                float: left;
+                list-style: none;
+            }
+        }
+    }
+}
+
+.main-container {
+    .boxes-block {
+        .title {
+            font-size: 25px;
+            text-transform: uppercase;
+            .link {
+                font-size: 14px;
+                font-style: italic;
+                font-family: georgia, serif;
+                text-decoration: none;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+.footer-container {
+    .logo-wrapper {
+        display: inline-block;
+        padding-left: 10px;
+        padding-right: 20px;
+    }
+
+    .logo {
+        height: auto;
+        width: 200px;
+    }
+
+    .info {
+        color: #fff;
+        display: inline-block;
+
+        .address {
+            .title {
+                font-size: 15px;
+                display: block;
+            }
+        }
+    }
+}
